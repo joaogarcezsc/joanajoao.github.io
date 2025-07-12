@@ -1,0 +1,320 @@
+/* RESET E BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100vw;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  background: #f7f7f7;
+  color: #3e3e3e;
+  line-height: 1.6;
+}
+
+/* CONTAINER GERAL */
+.container {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* MAIN */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Links Section */
+.links-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.link-button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 20px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #f7f7f7;
+  font-weight: 500;
+  font-size: 1.25em;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.link-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.link-button:hover::before {
+  left: 100%;
+}
+
+.link-button.primary {
+  background: linear-gradient(to left, #1eb0ee, #e976ae);
+  color: #f7f7f7;
+}
+
+.link-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px #390aa59d;
+}
+
+.link-icon {
+  font-size: 1.5em;
+  color: #f7f7f7;
+}
+
+.link-text {
+  flex: 1;
+  text-align: center;
+}
+
+/* SOBRE NÓS */
+.about-us-border {
+  background: linear-gradient(to left, #1eb0ee, #e976ae);
+  border-radius: 20px;
+  padding: 8px;
+}
+
+.about-us-section {
+  background: #f7f7f7;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.about-us-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+.about-us-section p {
+  margin-bottom: 15px;
+  text-align: justify;
+  line-height: 1.7;
+}
+
+/* VÍDEO (somente mobile) */
+video {
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+  display: none;
+  margin-top: 30px;
+}
+
+/* RODAPÉ */
+footer {
+  margin-top: 40px;
+  padding: 25px 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content p {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+.developer-credit {
+  font-weight: 500;
+}
+
+.highlight {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.creditos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.creditos a {
+  color: inherit;
+}
+
+/* ANÚNCIOS / CARROSSEL */
+.ads-carousel-section {
+  background: linear-gradient(to left, #1eb0ee, #e976ae);
+  border-radius: 20px;
+  padding: 25px;
+  margin-top: 30px;
+}
+
+.ads-carousel-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.ads-carousel-container {
+  background: #f7f7f7;
+  color: #3e3e3e;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  width: 100%;
+}
+
+.ad-carousel-item {
+  display: none;
+  padding: 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.ad-carousel-item.active {
+  display: block;
+}
+
+.ad-content h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.ad-content p {
+  margin-bottom: 20px;
+  font-size: 1em;
+}
+
+.ad-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: linear-gradient(to left, #1eb0ee, #e976ae);
+  color: #f7f7f7;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 0.9em;
+}
+
+.ad-button:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+/* PONTOS DO CARROSSEL */
+.ads-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.ad-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ad-dot.active {
+  background: #ffffff;
+  transform: scale(1.2);
+}
+
+.ad-dot:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  video {
+    display: block;
+  }
+
+  .ads-carousel-section {
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .ads-carousel-section h2 {
+    font-size: 1.5em;
+  }
+
+  .ad-content h3 {
+    font-size: 1.3em;
+  }
+
+  .ad-button {
+    padding: 10px 16px;
+    font-size: 0.85em;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 600px;
+    padding: 30px;
+  }
+
+  .links-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 800px;
+  }
+}
